@@ -1,2 +1,2 @@
 # fruitload
-Data management for fruitslife
+Data management for fruitlife
