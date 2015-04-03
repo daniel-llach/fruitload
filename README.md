@@ -10,7 +10,8 @@ This repository include a simple node server with a file upload support on the b
 - path
 - fs-extra
 
-* front(public) requiry permission (sudo chmod 777 -R)
+
+## front(public) requiry permission (sudo chmod 777 -R)
 ```
 bower install
 ```

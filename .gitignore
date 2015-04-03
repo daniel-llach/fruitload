@@ -32,3 +32,6 @@ public/bower_components/*
 
 # OSX data store
 .DS_Store
+
+# banco imagenes
+img
