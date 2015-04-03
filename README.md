@@ -15,7 +15,7 @@ npm install
 ```
 
 
-> front(public) requiry permission (sudo chmod 777 -R public)
+> front(public and img) requiry permission (sudo chmod 777 -R <<folder>>)
 ```
 bower install
 ```
