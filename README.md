@@ -9,9 +9,13 @@ This repository include a simple node server with a file upload support on the b
 - connect-busboy
 - path
 - fs-extra
+> install dependencies (package.json)
+```
+npm install
+```
 
 
-## front(public) requiry permission (sudo chmod 777 -R)
+> front(public) requiry permission (sudo chmod 777 -R public)
 ```
 bower install
 ```
