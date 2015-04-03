@@ -7,12 +7,11 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
-        "express": "*",
-        "connect-busboy": "*",
-        "path": "*",
-        "fs-extra": "*"
+        "express": "latest",
+        "connect-busboy": "latest",
+        "path": "latest",
+        "fs-extra": "latest"
     },
     "author": "Daniel LLach",
     "license": "BSD"
-
 }
