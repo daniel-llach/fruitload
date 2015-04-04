@@ -9,6 +9,7 @@ define([
 
 
     var MainContentView = Backbone.Marionette.LayoutView.extend({
+        alert('2');
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {

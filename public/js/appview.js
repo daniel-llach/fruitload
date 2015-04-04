@@ -21,11 +21,9 @@ define([
 
     AppView.addInitializer(function(options) {
         alert('1');
-        var maincontentview = new MainContentView();
-        alert('2');
 
         AppView.header.show(new HeaderLayout());
-        AppView.maincontent.show(maincontentview);
+        AppView.maincontent.show(new MainContentView());
 
     });
 
