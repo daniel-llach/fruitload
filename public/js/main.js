@@ -11,7 +11,9 @@ require.config({
         },
         marionette:{
             deps: [
-                "backbone"
+                "backbone",
+                "underscore",
+                "jquery"
             ]
         },
         backbone: {
