@@ -1,12 +1,11 @@
 /*global define*/
 define([
-    "backbone",
     "marionette",
     "text!templates/uploadimages/uploadimages.html"
-], function (Backbone, Marionette, UploadImagesTemplate) {
+], function (Marionette, UploadImagesTemplate) {
     "use strict";
 
-    var UploadImages = Backbone.Marionette.LayoutView.extend({
+    var UploadImages = Marionette.LayoutView.extend({
         className: "uploadimage",
         template: _.template(UploadImagesTemplate)
     });
