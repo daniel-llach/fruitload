@@ -26,10 +26,10 @@ define([
         regions: {
             leftcontent: ".maincontent .left",
             rightcontent: ".maincontent .right"
+        },
+        onRender: function(){
+            this.getRegion('rightcontent').show(new UploadImages());
         }
-        // onShow: function(){
-        //     this.getRegion('rightcontent').show(new UploadImages());
-        // }
     });
 
     AppView.addInitializer(function(options) {
@@ -37,7 +37,7 @@ define([
         AppView.header.show(new HeaderLayout());
         AppView.maincontent.show(maincontentview);
 
-        maincontentview.rightcontent.show(new UploadImages());
+
 
     });
 
