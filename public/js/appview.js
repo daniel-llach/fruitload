@@ -27,7 +27,7 @@ define([
         AppView.header.show(headerlayout);
         AppView.maincontent.show(maincontentview);
 
-        headerlayout.right.show(UploadImages);
+        maincontentview.right.show(UploadImages);
 
     });
 
