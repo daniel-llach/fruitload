@@ -12,10 +12,10 @@ define([
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {
-            "leftcontent": ".maincontent .left",
-            "rightcontent": ".maincontent .right"
+            leftcontent: ".maincontent .left",
+            rightcontent: ".maincontent .right"
         },
-        onRender: function(){
+        onShow: function(){
             this.rightcontent.show(new UploadImages());
         }
     });
@@ -25,5 +25,4 @@ define([
     //     MainContentView.rightcontent.show(uploadimages);
     // });
 
-    return MainContentView;
 });
