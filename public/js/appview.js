@@ -6,7 +6,7 @@ define([
 ], function (Backbone, Marionette, HeaderTemplate) {
     "use strict";
 
-    AppView = new Backbone.Marionette.Application();
+    var AppView = new Backbone.Marionette.Application();
     AppView.addRegions({
         'header': 'header',
         'maincontent': '.content',
