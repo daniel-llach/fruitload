@@ -11,20 +11,21 @@ define([
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {
-            "leftcontent": ".left",
-            "rightcontent": ".right"
+            "leftcontent": ".maincontent .left",
+            "rightcontent": ".maincontent .right"
         },
 
-        addInitializer: function(options){
-            var uploadimages = new UploadImages();
-            MainContentView.rightcontent.show(uploadimages);
-        }
+        // addInitializer: function(options){
+        //     var uploadimages = new UploadImages();
+        //     MainContentView.rightcontent.show(uploadimages);
+        // }
     });
 
-    // MainContentView.addInitializer(function(options) {
-    //     var uploadimages = new UploadImages();
-    //     MainContentView.right.show(uploadimages);
-    // });
+    MainContentView.addInitializer(function(options) {
+        var uploadimages = new UploadImages();
+        console.log(uploadimages);
+        MainContentView.rightcontent.show(uploadimages);
+    });
 
     return MainContentView;
 });
