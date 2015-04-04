@@ -20,8 +20,9 @@ define([
     });
 
     AppView.addInitializer(function(options) {
+        var maincontentview = new MainContentView()
         AppView.header.show(new HeaderLayout());
-        AppView.maincontent.show(new MainContentView());
+        AppView.maincontent.show(maincontentview);
     });
 
     return AppView;
