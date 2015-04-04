@@ -30,6 +30,6 @@ require([
     "appview"
 ], function (AppView) {
 
-    var app = new AppView();
+    App.start();
 
 });
