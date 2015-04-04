@@ -2,9 +2,8 @@
 define([
     "backbone",
     "marionette",
-    "text!templates/maincontent/maincontent.html",
-    "views/uploadimage/uploadimages"
-], function (Backbone, Marionette, MainContentTemplate, UploadImages) {
+    "text!templates/maincontent/maincontent.html"
+], function (Backbone, Marionette, MainContentTemplate) {
     "use strict";
 
 
@@ -17,10 +16,10 @@ define([
         }
     });
 
-    MainContentView.addInitializer(function(options) {
-        var uploadimages = new UploadImages();
-        MainContentView.right.show(uploadimages);
-    });
+    // MainContentView.addInitializer(function(options) {
+    //     var uploadimages = new UploadImages();
+    //     MainContentView.right.show(uploadimages);
+    // });
 
     return MainContentView;
 });
