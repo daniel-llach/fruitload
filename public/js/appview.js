@@ -2,9 +2,8 @@
 define([
     "backbone",
     "marionette",
-    "text!templates/header/header.html",
-    "views/maincontent/maincontent"
-], function (Backbone, Marionette, HeaderTemplate, MainContentView) {
+    "text!templates/header/header.html"
+], function (Backbone, Marionette, HeaderTemplate) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();
@@ -17,6 +16,20 @@ define([
     var HeaderLayout = Backbone.Marionette.LayoutView.extend({
         className: "title",
         template: _.template(HeaderTemplate)
+    });
+
+    var MainContentView = Backbone.Marionette.LayoutView.extend({
+        className: "maincontent",
+        template: _.template(MainContentTemplate)
+        regions: {
+            leftcontent: ".maincontent .left",
+            rightcontent: ".maincontent .right"
+        },
+        onShow: function(){
+            alert('2');
+
+            this.getRegion('rightcontent').show(new UploadImages());
+        }
     });
 
     AppView.addInitializer(function(options) {
