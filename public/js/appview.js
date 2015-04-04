@@ -14,7 +14,7 @@ define([
     });
 
     AppView.addInitializer(function(options) {
-        var headerLayout = new HeaderView();
+        var headerLayout = new HeaderLayout();
 
         AppView.header.show(headerLayout);
     });
