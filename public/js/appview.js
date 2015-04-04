@@ -2,8 +2,10 @@
 define([
     "backbone",
     "marionette",
-    "text!templates/header/header.html"
-], function (Backbone, Marionette, HeaderTemplate) {
+    "text!templates/header/header.html",
+    "text!templates/maincontent/maincontent.html",
+    "views/uploadimage/uploadimages"
+], function (Backbone, Marionette, HeaderTemplate, MainContentTemplate, UploadImages) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();
