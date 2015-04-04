@@ -2,8 +2,9 @@
 define([
     "backbone",
     "marionette",
-    "text!templates/header/header.html"
-], function (Backbone, Marionette, HeaderTemplate) {
+    "text!templates/header/header.html",
+    "views/maincontent/maincontent"
+], function (Backbone, Marionette, HeaderTemplate, MainContentView) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();
@@ -18,18 +19,20 @@ define([
         template: _.template(HeaderTemplate)
     });
 
-    var MainContent = Backbone.Marionette.LayoutView.extend({
-        template: _.template(HeaderTemplate),
-        regions: {
-            "left": "left",
-            "right": "right"
-        }
-    });
+    // var MainContent = Backbone.Marionette.LayoutView.extend({
+    //     template: _.template(MainContentTemplate),
+    //     regions: {
+    //         "left": "left",
+    //         "right": "right"
+    //     }
+    // });
 
     AppView.addInitializer(function(options) {
-        var headerLayout = new HeaderLayout();
+        var headerlayout = new HeaderLayout();
+        var maincontentview = new MainContentView();
 
-        AppView.header.show(headerLayout);
+        AppView.header.show(headerlayout);
+        AppView.maincontent.show(maincontentview);
     });
 
     return AppView;
