@@ -13,7 +13,7 @@ define([
         regions: {
             "leftcontent": ".maincontent .left",
             "rightcontent": ".maincontent .right"
-        },
+        }
 
         // addInitializer: function(options){
         //     var uploadimages = new UploadImages();
