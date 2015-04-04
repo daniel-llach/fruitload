@@ -26,19 +26,18 @@ define([
         regions: {
             leftcontent: ".maincontent .left",
             rightcontent: ".maincontent .right"
-        },
-        onShow: function(){
-            alert('2');
-
-            this.getRegion('rightcontent').show(new UploadImages());
         }
+        // onShow: function(){
+        //     this.getRegion('rightcontent').show(new UploadImages());
+        // }
     });
 
     AppView.addInitializer(function(options) {
-        alert('1');
-
+        var maincontentview = new MainContentView()
         AppView.header.show(new HeaderLayout());
-        AppView.maincontent.show(new MainContentView());
+        AppView.maincontent.show(maincontentview);
+
+        maincontentview.rightcontent.show(new UploadImages());
 
     });
 
