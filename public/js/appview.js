@@ -10,7 +10,7 @@ define([
     var AppView = new Backbone.Marionette.Application();
     AppView.addRegions({
         'header': 'header',
-        'maincontent': '.content',
+        'rightcontent': '.content .right',
         'footer': 'footer'
     });
 
@@ -21,7 +21,7 @@ define([
 
     AppView.addInitializer(function(options) {
         AppView.header.show(new HeaderLayout());
-        AppView.maincontent.show(new UploadImagesView());
+        AppView.rightcontent.show(new UploadImagesView());
     });
 
     return AppView;
