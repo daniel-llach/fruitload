@@ -15,7 +15,6 @@ define([
             rightcontent: ".maincontent .right"
         },
         onShow: function(){
-            alert('2');
             this.rightcontent.show(new UploadImages());
         }
     });
