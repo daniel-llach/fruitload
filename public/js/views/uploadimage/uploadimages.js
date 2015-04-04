@@ -3,13 +3,13 @@ define([
     "backbone",
     "marionette",
     "text!templates/uploadimages/uploadimages.html"
-], function (Backbone, Marionette, UploadImages) {
+], function (Backbone, Marionette, UploadImagesTemplate) {
     "use strict";
 
 
     var UploadImages = Backbone.Marionette.LayoutView.extend({
         className: "uploadimage",
-        template: _.template(UploadImages)
+        template: _.template(UploadImagesTemplate)
     });
 
     return UploadImages;
