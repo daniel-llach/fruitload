@@ -7,24 +7,16 @@ define([
 ], function (Backbone, Marionette, MainContentTemplate, UploadImages) {
     "use strict";
 
-
     var MainContentView = Backbone.Marionette.LayoutView.extend({
         className: "maincontent",
-        template: _.template(MainContentTemplate)
-        // regions: {
-        //     leftcontent: ".maincontent .left",
-        //     rightcontent: ".maincontent .right"
-        // },
-        // onShow: function(){
-        //     alert('2');
-
-        //     this.getRegion('rightcontent').show(new UploadImages());
-        // }
+        template: _.template(MainContentTemplate),
+        regions: {
+            leftcontent: ".leftcontent",
+            rightcontent: ".rightcontent"
+        },
+        onRender: function(){
+            this.getRegion('rightcontent').show(new UploadImages());
+        }
     });
-
-    // MainContentView.addInitializer(function(options) {
-    //     var uploadimages = new UploadImages();
-    //     MainContentView.rightcontent.show(uploadimages);
-    // });
 
 });
