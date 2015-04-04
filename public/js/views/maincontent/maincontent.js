@@ -9,7 +9,6 @@ define([
 
 
     var MainContentView = Backbone.Marionette.LayoutView.extend({
-        alert('2');
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {
@@ -17,6 +16,8 @@ define([
             rightcontent: ".maincontent .right"
         },
         onShow: function(){
+            alert('2');
+
             this.getRegion('rightcontent').show(new UploadImages());
         }
     });
