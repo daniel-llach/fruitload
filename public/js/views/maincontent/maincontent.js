@@ -7,9 +7,15 @@ define([
 ], function (Backbone, Marionette, MainContentTemplate, UploadImages) {
     "use strict";
 
-    var MainContentView = Backbone.Marionette.LayoutView.extend({
+    var MainContentView = Backbone.Marionette.Layout.extend({
         className: "maincontent",
-        template: _.template(MainContentTemplate)
+        template: _.template(MainContentTemplate),
+        regions: {
+            leftcontent: ".leftcontent",
+            rightcontent: ".rightcontent"
+        }
     });
+
+
 
 });

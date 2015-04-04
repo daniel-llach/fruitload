@@ -6,7 +6,7 @@ define([
 ], function (Backbone, Marionette, UploadImagesTemplate) {
     "use strict";
 
-    var UploadImages = Backbone.Marionette.LayoutView.extend({
+    var UploadImages = Backbone.Marionette.itemView.extend({
         className: "uploadimage",
         template: _.template(UploadImagesTemplate)
     });

@@ -3,8 +3,8 @@ define([
     "backbone",
     "marionette",
     "text!templates/header/header.html",
-    "views/maincontent/maincontent"
-], function (Backbone, Marionette, HeaderTemplate, MainContentView) {
+    "views/uploadimage/uploadimages"
+], function (Backbone, Marionette, HeaderTemplate, UploadImagesView) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();
@@ -20,9 +20,8 @@ define([
     });
 
     AppView.addInitializer(function(options) {
-        var maincontentview = new MainContentView()
         AppView.header.show(new HeaderLayout());
-        AppView.maincontent.show(maincontentview);
+        AppView.maincontent.show(new UploadImagesView());
     });
 
     return AppView;
