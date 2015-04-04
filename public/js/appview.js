@@ -13,7 +13,7 @@ define([
         'footer': 'footer'
     });
 
-    var HeaderLayout = Backbone.Marionette.Layout.extend({
+    var HeaderLayout = Backbone.Marionette.LayoutView.extend({
         template: _.template(HeaderTemplate)
     });
 
