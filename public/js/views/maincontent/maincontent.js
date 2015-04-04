@@ -8,7 +8,7 @@ define([
     "use strict";
 
     var MainContentView = Backbone.Marionette.LayoutView.extend({
-        alert('ah');
+
     });
 
 });
