@@ -19,6 +19,7 @@ define([
     });
 
     AppView.addInitializer(function(options) {
+        alert('1');
         var maincontentview = new MainContentView();
 
         AppView.header.show(new HeaderLayout());
