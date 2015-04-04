@@ -10,16 +10,16 @@ define([
 
     var MainContentView = Backbone.Marionette.LayoutView.extend({
         className: "maincontent",
-        template: _.template(MainContentTemplate),
-        regions: {
-            leftcontent: ".maincontent .left",
-            rightcontent: ".maincontent .right"
-        },
-        onShow: function(){
-            alert('2');
+        template: _.template(MainContentTemplate)
+        // regions: {
+        //     leftcontent: ".maincontent .left",
+        //     rightcontent: ".maincontent .right"
+        // },
+        // onShow: function(){
+        //     alert('2');
 
-            this.getRegion('rightcontent').show(new UploadImages());
-        }
+        //     this.getRegion('rightcontent').show(new UploadImages());
+        // }
     });
 
     // MainContentView.addInitializer(function(options) {
