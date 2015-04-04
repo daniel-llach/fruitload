@@ -11,8 +11,13 @@ define([
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {
-            "left": "left",
-            "right": "right"
+            "leftcontent": ".left",
+            "rightcontent": ".right"
+        },
+
+        addInitializer: function(options){
+            var uploadimages = new UploadImages();
+            MainContentView.rightcontent.show(uploadimages);
         }
     });
 

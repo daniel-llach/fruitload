@@ -3,9 +3,9 @@ define([
     "backbone",
     "marionette",
     "text!templates/header/header.html",
-    "views/uploadimage/uploadimages",
-    "text!templates/maincontent/maincontent.html"
-], function (Backbone, Marionette, HeaderTemplate, UploadImages, MainContentTemplate) {
+    "views/maincontent/maincontent",
+    "views/uploadimage/uploadimages"
+], function (Backbone, Marionette, HeaderTemplate, MainContentView, UploadImages) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();
@@ -20,22 +20,12 @@ define([
         template: _.template(HeaderTemplate)
     });
 
-    var MainContentView = Backbone.Marionette.LayoutView.extend({
-        className: "maincontent",
-        template: _.template(MainContentTemplate),
-        regions: {
-            "left": "left",
-            "right": "right"
-        }
-    });
-
     AppView.addInitializer(function(options) {
         var maincontentview = new MainContentView();
 
         AppView.header.show(new HeaderLayout());
         AppView.maincontent.show(maincontentview);
 
-        maincontentview.right.show(new UploadImages());
 
     });
 
