@@ -19,14 +19,6 @@ define([
         template: _.template(HeaderTemplate)
     });
 
-    // var MainContent = Backbone.Marionette.LayoutView.extend({
-    //     template: _.template(MainContentTemplate),
-    //     regions: {
-    //         "left": "left",
-    //         "right": "right"
-    //     }
-    // });
-
     AppView.addInitializer(function(options) {
         var headerlayout = new HeaderLayout();
         var maincontentview = new MainContentView();
