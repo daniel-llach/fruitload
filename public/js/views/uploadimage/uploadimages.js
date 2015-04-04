@@ -3,7 +3,7 @@ define([
     "backbone",
     "marionette",
     "text!templates/uploadimages/uploadimages.html"
-], function (Backbone, Marionette, MainContentTemplate, UploadImages) {
+], function (Backbone, Marionette, UploadImages) {
     "use strict";
 
 
