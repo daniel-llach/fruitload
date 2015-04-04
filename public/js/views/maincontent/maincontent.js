@@ -8,15 +8,7 @@ define([
     "use strict";
 
     var MainContentView = Backbone.Marionette.LayoutView.extend({
-        className: "maincontent",
-        template: _.template(MainContentTemplate),
-        regions: {
-            "leftcontent": ".leftcontent",
-            "rightcontent": ".rightcontent"
-        },
-        onShow: function(){
-            this.rightcontent.show(new UploadImages());
-        }
+        alert('ah');
     });
 
 });
