@@ -25,7 +25,6 @@ define([
         AppView.header.show(new HeaderLayout());
         AppView.maincontent.show(maincontentview);
 
-
     });
 
     return AppView;

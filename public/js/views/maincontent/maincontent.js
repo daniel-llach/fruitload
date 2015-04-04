@@ -15,10 +15,8 @@ define([
             "leftcontent": ".maincontent .left",
             "rightcontent": ".maincontent .right"
         },
-
-        addInitializer: function(options){
-            var uploadimages = new UploadImages();
-            MainContentView.rightcontent.show(uploadimages);
+        onRender: function(){
+            this.rightcontent.show(new UploadImages());
         }
     });
 
