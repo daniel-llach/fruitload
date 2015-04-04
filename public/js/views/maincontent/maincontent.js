@@ -11,11 +11,11 @@ define([
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {
-            leftcontent: ".leftcontent",
-            rightcontent: ".rightcontent"
+            "leftcontent": ".leftcontent",
+            "rightcontent": ".rightcontent"
         },
-        onRender: function(){
-            this.getRegion('rightcontent').show(new UploadImages());
+        onShow: function(){
+            this.rightcontent.show(new UploadImages());
         }
     });
 
