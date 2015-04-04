@@ -6,9 +6,9 @@ define([
 ], function (Backbone, Marionette, MainContentTemplate) {
     "use strict";
 
-    el: $(".content"),
 
     var MainContentView = Backbone.Marionette.LayoutView.extend({
+        el: $(".content"),
         template: _.template(MainContentTemplate),
         regions: {
             "left": "left",
