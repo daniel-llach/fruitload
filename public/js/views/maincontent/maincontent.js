@@ -16,7 +16,7 @@ define([
             rightcontent: ".maincontent .right"
         },
         onShow: function(){
-            this.rightcontent.show(new UploadImages());
+            this.getRegion('rightcontent').show(new UploadImages());
         }
     });
 
