@@ -3,7 +3,7 @@ define([
     "backbone",
     "marionette",
     "views/header/headerview"
-], function (Backbone, Marionette, HeaderView) {
+], function (Backbone, Marionette, HeaderLayout) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();
