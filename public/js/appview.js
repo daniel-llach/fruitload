@@ -14,7 +14,16 @@ define([
     });
 
     var HeaderLayout = Backbone.Marionette.LayoutView.extend({
+        className: "title",
         template: _.template(HeaderTemplate)
+    });
+
+    var MainContent = Backbone.Marionette.LayoutView.extend({
+        template: _.template(HeaderTemplate),
+        regions: {
+            "left": "left",
+            "right": "right"
+        }
     });
 
     AppView.addInitializer(function(options) {
@@ -22,20 +31,6 @@ define([
 
         AppView.header.show(headerLayout);
     });
-
-    // var AppView = Backbone.View.extend({
-
-    //     regions: {
-    //         header: "header",
-    //         maincontent: ".content",
-    //         footer: "footer"
-    //     },
-
-    //     initialize: function () {
-    //        // alert('ehhhh!!!');
-    //     }
-
-    // });
 
     return AppView;
 });
