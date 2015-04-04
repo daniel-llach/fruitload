@@ -3,9 +3,8 @@ define([
     "backbone",
     "marionette",
     "text!templates/header/header.html",
-    "views/maincontent/maincontent",
-    "views/uploadimage/uploadimages"
-], function (Backbone, Marionette, HeaderTemplate, MainContentView, UploadImages) {
+    "views/maincontent/maincontent"
+], function (Backbone, Marionette, HeaderTemplate, MainContentView) {
     "use strict";
 
     var AppView = new Backbone.Marionette.Application();

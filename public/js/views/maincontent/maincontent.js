@@ -2,8 +2,9 @@
 define([
     "backbone",
     "marionette",
-    "text!templates/maincontent/maincontent.html"
-], function (Backbone, Marionette, MainContentTemplate) {
+    "text!templates/maincontent/maincontent.html",
+    "views/uploadimage/uploadimages"
+], function (Backbone, Marionette, MainContentTemplate, UploadImages) {
     "use strict";
 
 
@@ -23,7 +24,6 @@ define([
 
     MainContentView.addInitializer(function(options) {
         var uploadimages = new UploadImages();
-        console.log(uploadimages);
         MainContentView.rightcontent.show(uploadimages);
     });
 
