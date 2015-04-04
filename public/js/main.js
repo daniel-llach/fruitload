@@ -9,13 +9,6 @@ require.config({
         underscore: {
             exports: "_"
         },
-        marionette:{
-            deps: [
-                "backbone",
-                "underscore",
-                "jquery"
-            ]
-        },
         backbone: {
             deps: [
                 "underscore",

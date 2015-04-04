@@ -1,12 +1,13 @@
 /*global define*/
 define([
+    "backbone",
     "marionette",
     "text!templates/header/header.html",
     "views/maincontent/maincontent"
-], function (Marionette, HeaderTemplate, MainContentView) {
+], function (Backbone, Marionette, HeaderTemplate, MainContentView) {
     "use strict";
 
-    var AppView = new Marionette.Application();
+    var AppView = new Backbone.Marionette.Application();
     AppView.addRegions({
         'header': 'header',
         'maincontent': '.content',

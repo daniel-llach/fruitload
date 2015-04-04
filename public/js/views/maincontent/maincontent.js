@@ -1,13 +1,14 @@
 /*global define*/
 define([
+    "backbone",
     "marionette",
     "text!templates/maincontent/maincontent.html",
     "views/uploadimage/uploadimages"
-], function (Marionette, MainContentTemplate, UploadImages) {
+], function (Backbone, Marionette, MainContentTemplate, UploadImages) {
     "use strict";
 
 
-    var MainContentView = Marionette.LayoutView.extend({
+    var MainContentView = Backbone.Marionette.LayoutView.extend({
         className: "maincontent",
         template: _.template(MainContentTemplate),
         regions: {
