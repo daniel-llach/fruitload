@@ -24,6 +24,21 @@
 
 }
 
+.border-radius(@radius: 10px)
+{
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.shadow(@s: 3px 3px 4px #444) {
+    -moz-box-shadow: @s;
+    -webkit-box-shadow: @s;
+    box-shadow: @s;
+}
+
 //// CSS ////
 body
 {
@@ -57,6 +72,9 @@ body
             margin: 2%;
             background: rgb(218, 224, 215);
             position: relative;
+
+            .border-radius(20px);
+            .shadow(inset 3px 3px 3px #CCD0CA);
         }
 
         .right
@@ -68,6 +86,8 @@ body
             background: rgb(218, 224, 215);
             position: relative;
 
+            .border-radius(20px);
+            .shadow(inset 3px 3px 3px #CCD0CA);
 
               .uploadimage
               {
