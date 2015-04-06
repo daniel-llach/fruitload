@@ -7,7 +7,7 @@ define([
 ], function (Backbone, Marionette, HeaderTemplate, UploadImagesView) {
     "use strict";
 
-    alert('front start');
+
 
     var AppView = new Backbone.Marionette.Application();
     AppView.addRegions({
