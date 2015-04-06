@@ -1,10 +1,9 @@
 /*global define*/
 define([
-    "backbone",
-    "marionette",
+    "marionette"
     "text!templates/header/header.html",
     "views/uploadimage/uploadimages"
-], function (Backbone, Marionette, HeaderTemplate, UploadImagesView) {
+], function (Marionette, HeaderTemplate, UploadImagesView) {
     "use strict";
 
 
