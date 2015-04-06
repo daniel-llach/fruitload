@@ -1,6 +1,6 @@
 /*global define*/
 define([
-    "marionette"
+    "marionette",
     "text!templates/header/header.html",
     "views/uploadimage/uploadimages"
 ], function (Marionette, HeaderTemplate, UploadImagesView) {
