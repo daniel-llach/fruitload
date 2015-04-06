@@ -12,7 +12,8 @@ require.config({
         marionette:{
             deps: [
                 "backbone"
-            ]
+            ],
+            exports: "marionette"
         },
         backbone: {
             deps: [
@@ -27,7 +28,7 @@ require.config({
         underscore: "../bower_components/underscore/underscore",
         backbone: "../bower_components/backbone/backbone",
         marionette: '../bower_components/backbone.marionette/lib/backbone.marionette',
-        text: "../bower_components/requirejs/require"
+        text: "../bower_components/requirejs-text/text"
     }
 });
 
