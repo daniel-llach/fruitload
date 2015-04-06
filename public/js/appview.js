@@ -6,8 +6,6 @@ define([
 ], function (Marionette, HeaderTemplate, UploadImagesView) {
     "use strict";
 
-
-
     var AppView = new Backbone.Marionette.Application();
     AppView.addRegions({
         'header': 'header',

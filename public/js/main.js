@@ -36,8 +36,6 @@ require([
     "appview"
 ], function (AppView) {
 
-    alert('front start');
-
     AppView.start();
 
 });
