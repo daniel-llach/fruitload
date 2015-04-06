@@ -2,10 +2,10 @@
   "name": "fruitload-component",
   "version": "0.0.1",
   "dependencies": {
-    "backbone.marionette": "~1.6.4",
-    "underscore": "~1.5.0",
-    "requirejs": "~2.1.5",
-    "requirejs-text": "~2.0.5"
+    "backbone.marionette": "*",
+    "underscore": "*",
+    "requirejs": "*",
+    "requirejs-text": "*"
   }
 }
 
