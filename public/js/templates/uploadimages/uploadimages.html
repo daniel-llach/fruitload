@@ -1,4 +1,6 @@
-<form method='post' action='upload' enctype="multipart/form-data">
-    <input multiple="multiple" type='file' name='fileUploaded'>
-    <input type='submit'>
+<form action="/upload" enctype="multipart/form-data" method="post">
+    Add a title:
+    <input name="title" type="text" />
+    <input multiple="multiple" name="upload" type="file" />
+    <input type="submit" value="Upload" />
 </form>

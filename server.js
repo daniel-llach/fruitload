@@ -1,35 +1,43 @@
-var express = require('express');    //Express Web Server
-var busboy = require('connect-busboy'); //middleware for form/file upload
-var path = require('path');     //used for file path
-var fs = require('fs-extra');       //File System - for file manipulation
+var express = require("express"),
+    app = express(),
+    formidable = require('formidable'),
+    util = require('util'),
+    fs   = require('fs-extra'),
+    qt   = require('quickthumb');
 
-var app = express();
-app.use(busboy());
-app.use(express.static(path.join(__dirname, 'public')));
+// Use quickthumb
+app.use(qt.static(__dirname + '/'));
 
-/* ==========================================================
-Create a Route (/upload) to handle the Form submission
-(handle POST requests to /upload)
-Express v4  Route definition
-============================================================ */
-app.route('/upload')
-    .post(function (req, res, next) {
+app.post('/upload', function (req, res){
+  var form = new formidable.IncomingForm();
+  form.parse(req, function(err, fields, files) {
+    res.writeHead(200, {'content-type': 'text/plain'});
+    res.write('received upload:\n\n');
+    res.end(util.inspect({fields: fields, files: files}));
+  });
 
-        var fstream;
-        req.pipe(req.busboy);
-        req.busboy.on('file', function (fieldname, file, filename) {
-            console.log("Uploading: " + filename);
+  form.on('end', function(fields, files) {
+    /* Temporary location of our uploaded file */
+    var temp_path = this.openedFiles[0].path;
+    /* The file name of the uploaded file */
+    var file_name = this.openedFiles[0].name;
+    /* Location where we want to copy the uploaded file */
+    var new_location = 'img/';
 
-            //Path where image will be uploaded
-            fstream = fs.createWriteStream(__dirname + '/img/' + filename);
-            file.pipe(fstream);
-            fstream.on('close', function () {
-                console.log("Upload Finished of " + filename);
-                res.redirect('back');           //where to go next
-            });
-        });
+    fs.copy(temp_path, new_location + file_name, function(err) {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("success!")
+      }
     });
-
-var server = app.listen(3030, function() {
-    console.log('Listening on port %d', server.address().port);
+  });
 });
+
+// // Show the upload form
+// app.get('/', function (req, res){
+//   res.writeHead(200, {'Content-Type': 'text/html' });
+//   var form = '<form action="/upload" enctype="multipart/form-data" method="post">Add a title: <input name="title" type="text" /><br><br><input multiple="multiple" name="upload" type="file" /><br><br><input type="submit" value="Upload" /></form>';
+//   res.end(form);
+// });
+app.listen(8080);

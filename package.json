@@ -8,10 +8,12 @@
     },
     "dependencies": {
         "express": "latest",
-        "connect-busboy": "latest",
-        "path": "latest",
+        "formidable": "latest",
+        "quickthumb": "latest",
         "fs-extra": "latest"
     },
     "author": "Daniel LLach",
     "license": "BSD"
 }
+
+
