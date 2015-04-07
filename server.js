@@ -25,7 +25,7 @@ app.route('/upload')
             file.pipe(fstream);
             fstream.on('close', function () {
                 console.log("Upload Finished of " + filename);
-                res.redirect('back');           //where to go next
+                res.redirect('/upload/succes');           //where to go next
             });
         });
     });

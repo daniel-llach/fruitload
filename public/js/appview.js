@@ -21,7 +21,10 @@ define([
     AppView.addInitializer(function(options) {
         AppView.header.show(new HeaderLayout());
         AppView.rightcontent.show(new UploadImagesView());
+
     });
+
+
 
     return AppView;
 });
